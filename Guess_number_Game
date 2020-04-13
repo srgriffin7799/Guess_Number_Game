@@ -1,0 +1,25 @@
+
+i=0
+guess_number=int(input("Enter the number you want to make Magical Number between 1 to 20:"))
+chances=int(input("Enter the no. of chances:"))     
+chances1=chances
+while(i!=chances1):
+    num=int(input("Enter your number between 1 to 10:"))
+    if(num <= 20):
+        chances=chances-1
+        if(num == guess_number):
+            print("Correct Guess, Congratulations you have attempted ", i+1, "times", "and have won it after", i, "guesses")
+            break
+        elif(num < guess_number):
+            print("No, You Lost a Chance.\n Hint: My Number is Greater than you Expected")
+            print("The number  of chances left:",chances)
+        elif(num > guess_number):
+            print("No,You Lost a Chance.\n Hint: My Number is Lesser than you expected")
+            print("The number of chances left:",chances)
+        i=i+1
+    else:
+        print("Invalid Number:Enter Number only between 1 to 20")
+else:
+    print("Game Over")
+    print("The Guess_Number is:", guess_number)
+
